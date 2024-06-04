@@ -1,0 +1,652 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(33, 33, 33);
+}
+
+h1 {
+    cursor: default;
+}
+
+p {
+    cursor: default;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*Top Menu Bar:*/
+.menuBtn {
+    color: white;
+    background: none;
+    border: none;
+
+    font-size: 18px;
+    font-weight: 100;
+
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+.menuBtn+.menuBtn {
+    margin-left: 10px;
+}
+
+.menuBtn:hover {
+    border-bottom-style: solid;
+    border-bottom-color: white;
+
+    color: rgb(34, 168, 34);
+}
+
+.loginbtn:hover {
+    color: white;
+    letter-spacing: 2px;
+    border-bottom-color: rgb(34, 168, 34);
+}
+
+#btnDiv {
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 10%;
+}
+
+#menuBar {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    box-sizing: border-box;
+
+    height: 75px;
+    width: 100%;
+
+    top: 0px;
+    left: 0px;
+
+    background-color: black;
+
+    box-shadow: 0px 0px 20px rgb(15, 48, 22);
+
+    z-index: 5;
+
+    transition: 150ms ease-in-out;
+}
+
+#menuLogo {
+    height: 50px;
+    width: 50px;
+}
+
+#profilePic {
+    height: 35px;
+    width: 35px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    margin-left: 10px;
+}
+
+#signUpDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (min-width: 850px) {
+    .mainBtn+.mainBtn {
+        margin-left: 75px;
+    }
+
+    .mainBtn {
+        letter-spacing: 3px;
+    }
+
+    .loginBtn+.loginBtn {
+        margin-left: 20px;
+    }
+
+    #menuBar {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+/* Main Cover */
+#blackCover {
+    position: absolute;
+    top: 75px;
+    left: 0%;
+
+    height: 500px;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.351);
+
+    z-index: 2;
+}
+
+#cover {
+    position: absolute;
+    top: 75px;
+    left: 0px;
+
+    height: 500px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-image: url("https://images.unsplash.com/photo-1554576575-a4e7b6e8409d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-blend-mode: color;
+}
+
+#coverTitleDiv {
+    height: 350px;
+    width: 350px;
+
+    position: absolute;
+
+    top: 75px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+
+    border-color: rgba(205, 205, 205, 0.0);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 40px;
+
+    z-index: 3;
+
+    transition: 200ms ease-in-out;
+}
+
+#coverTitleDiv:hover {
+    border-color: rgba(255, 255, 255, 0.01);
+}
+
+#coverTitleText {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 10px;
+
+    color: rgb(255, 255, 255);
+
+    margin-bottom: 0px;
+}
+
+#coverSub {
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: white;
+}
+
+#coverBtn {
+    width: 200px;
+    height: 50px;
+
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(34, 168, 34);
+    border-width: 2px;
+
+    background-color: whitesmoke;
+
+    transition: 100ms ease-in-out;
+}
+
+#coverBtn:hover {
+    border-color: black;
+    border-width: 3px;
+    background-color: rgb(56, 227, 56);
+    color: white;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 850px) {
+    #cover {
+        background-position-y: 50%;
+    }
+}
+
+/*Product Section*/
+#productSection {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    top: 575px;
+    left: 0%;
+
+    height: 800px;
+    width: 100%;
+
+    background-color: black;
+}
+
+#productTitle {
+    margin-top: 45px;
+
+    font-size: 30px;
+    letter-spacing: 2px;
+
+    text-shadow: 0px 0px 10px gray;
+
+    border-bottom-style: dashed;
+    border-bottom-color: rgb(40, 40, 40);
+
+    padding-bottom: 20px;
+
+    color: white;
+}
+
+#productSubtitle {
+    width: 400px;
+
+    text-align: center;
+
+    letter-spacing: 1px;
+    line-height: 30px;
+
+    color: white;
+
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+#allProductDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 450px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+
+    margin-top: 15px;
+
+    box-sizing: border-box;
+}
+
+.classProductImage {
+    width: 150px;
+    height: 150px;
+}
+
+.productDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 0px;
+    padding-bottom: 15px;
+
+    width: 250px;
+    height: 500px;
+
+    background-color: rgb(15, 15, 15);
+
+    box-shadow: 0px 0px 10px rgb(14, 85, 14);
+
+    transition: 100ms ease-in-out;
+}
+
+.productDiv+.productDiv {
+    margin-left: 40px;
+}
+
+/*.productDiv:hover {
+    background-color: rgb(235, 235, 235);
+}*/
+
+.classProductTitle {
+    text-align: center;
+
+    width: 95%;
+    letter-spacing: 2px;
+    margin-top: 10px;
+
+    font-size: 22px;
+
+    color: white;
+}
+
+.classProductImage {
+    border-width: 0px;
+    border-style: solid;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition: 200ms ease-in-out;
+
+    height: 250px;
+    width: 100%;
+}
+
+.classProductImage:hover {
+    border-width: 5px;
+    border-color: rgb(34, 168, 34);
+
+    box-shadow: 0px 0px 20px rgb(15, 48, 22);
+}
+
+.classProductSub {
+    letter-spacing: 4px;
+
+    color: whitesmoke;
+    text-align: right;
+    width: 225px;
+
+    font-weight: 500;
+    font-size: 13px;
+
+    margin-top: 0px;
+
+    border-top-style: solid;
+    border-top-color: rgb(34, 168, 34);
+    border-top-width: 5px;
+
+    padding-top: 10px;
+}
+
+.classProductPrice {
+    color: whitesmoke;
+
+    margin-top: 10px;
+    text-align: left;
+    width: 225px;
+
+    font-size: 13px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+#btnContainer {
+    position: absolute;
+    top: 750px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#seeMore {
+    width: 150px;
+
+    font-size: 17px;
+    font-weight: 100;
+
+    color: rgb(34, 168, 34);
+    background: none;
+    border: none;
+
+    letter-spacing: 3px;
+
+    transition: 150ms ease-in-out;
+}
+
+#seeMore:hover {
+    letter-spacing: 5px;
+
+    text-shadow: 0px 0px 5px white;
+}
+
+@media screen and (max-width:1275px) {}
+
+/* About Us Section */
+#aboutSection {
+    position: absolute;
+    top: 1375px;
+    left: 0%;
+
+    height: 1100px;
+    width: 100%;
+
+    background-color: rgb(25, 25, 25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aboutTitle {
+    margin-top: 50px;
+
+    font-size: 30px;
+    letter-spacing: 2px;
+
+    text-shadow: 0px 0px 10px gray;
+
+    border-bottom-style: dashed;
+    border-bottom-color: gray;
+
+    padding-bottom: 20px;
+
+    color: white;
+}
+
+#sectionOne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 35px;
+}
+
+#description {
+    width: 600px;
+    height: 400px;
+
+    box-sizing: border-box;
+
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+#aboutImage {
+    width: 600px;
+    height: 400px;
+
+    border-radius: 10px;
+    box-shadow: 10px 10px 1px rgb(23, 136, 23);
+}
+
+.aboutSectionTitle {
+    color: rgb(56, 227, 56);
+
+    letter-spacing: 2px;
+
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: gray;
+
+    padding-bottom: 10px;
+}
+
+.aboutSectiontext {
+    color: gainsboro;
+
+    letter-spacing: 2px;
+    line-height: 35px;
+
+    text-align: justify;
+
+    font-weight: 500;
+}
+
+#sectionTwo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 50px;
+}
+
+#descriptionTwo {
+    width: 600px;
+    height: 400px;
+
+    box-sizing: border-box;
+
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+#contactImage {
+    width: 600px;
+    height: 300px;
+
+    box-shadow: -10px 10px 0px rgb(62, 126, 62);
+    border-radius: 10px;
+}
+
+.contactTitle {
+    color: rgb(56, 227, 56);
+
+    letter-spacing: 2px;
+
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: gray;
+
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+.aboutData {
+    color: gainsboro;
+
+    letter-spacing: 2px;
+    line-height: 35px;
+
+    text-align: right;
+
+    font-weight: 500;
+    display: inline;
+}
+
+.infoDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.mediaLogo {
+    display: inline;
+    width: 35px;
+    height: 35px;
+
+    margin-left: 10px;
+}
+
+@media screen and (max-width:1275px) {
+    #sectionOne {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sectionTwo {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #aboutSection {
+        height: 1800;
+    }
+}
+
+/* Rights Section */
+#rightsDiv {
+    position: absolute;
+    top: 2425px;
+    left: 0%;
+    height: 75px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    background-color: black;
+}
+
+#rightsText {
+    color: gainsboro;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+}
+
+#slogan {
+    color: rgb(34, 168, 34);
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+h3 {
+    cursor: default;
+}
+
+h2 {
+    cursor: default;
+}
+
+@media screen and (max-width:1275px) {
+    #rightsDiv {
+        top: 3175px;
+    }
+}
